@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "shell",
+      "command": "pnpm dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "pnpm build",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "pnpm lint",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "lint:fix",
+      "type": "shell",
+      "command": "pnpm lint --fix",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "type-check",
+      "type": "shell",
+      "command": "pnpm tsc --noEmit",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "format",
+      "type": "shell",
+      "command": "pnpm prettier --write .",
+      "problemMatcher": []
+    }
+  ]
+}

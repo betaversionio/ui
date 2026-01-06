@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-azuretools.vscode-docker",
+    "GitHub.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "GitHub.copilot",
+    "usernamehw.errorlens",
+    "christian-kohler.path-intellisense",
+    "yoavbls.pretty-ts-errors",
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "streetsidesoftware.code-spell-checker",
+    "wix.vscode-import-cost",
+    "Gruntfuggly.todo-tree"
+  ],
+  "unwantedRecommendations": []
+}

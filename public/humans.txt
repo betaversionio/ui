@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: Your Team
+    Contact: contact@betaversion.io
+    Location: Your Location
+
+# THANKS
+
+    Contributors and the open source community
+
+# TECHNOLOGY STACK
+
+    Framework: Next.js 16
+    Language: TypeScript 5
+    Styling: Tailwind CSS 4
+    Runtime: Node.js 20
+    Package Manager: pnpm 9
+    Container: Docker
+    Hosting: Vercel
+    Version Control: Git
+
+# SITE
+
+    Last update: 2025-01-19
+    Standards: HTML5, CSS3, ES2023
+    Components: React 19
+    IDE: VS Code

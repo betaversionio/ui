@@ -1,0 +1,169 @@
+{
+  // Editor - Formatting
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // Editor - Visual Enhancements
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.indentation": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.cursorBlinking": "blink",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.smoothScrolling": false,
+  "editor.lineNumbers": "on",
+  "editor.renderLineHighlight": "all",
+  "editor.occurrencesHighlight": "multiFile",
+  "editor.selectionHighlight": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+
+  // Files
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.turbo": true,
+    "**/coverage": true,
+    "pnpm-lock.yaml": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/out/**": true,
+    "**/build/**": true,
+    "**/dist/**": true,
+    "**/.turbo/**": true
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.trimTrailingWhitespace": false
+  },
+
+  // Explorer - File Nesting
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).test.ts, $(capture).spec.ts",
+    "*.tsx": "$(capture).test.tsx, $(capture).spec.tsx, $(capture).module.css, $(capture).module.scss, $(capture).stories.tsx",
+    "*.js": "$(capture).test.js, $(capture).spec.js",
+    "*.jsx": "$(capture).test.jsx, $(capture).spec.jsx, $(capture).module.css, $(capture).module.scss",
+    "package.json": "package-lock.json, pnpm-lock.yaml, yarn.lock, pnpm-workspace.yaml, .npmrc, .nvmrc, .node-version, .pnpmfile.cjs",
+    "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+    "next.config.ts": "next-env.d.ts",
+    "next.config.js": "next-env.d.ts",
+    "tailwind.config.ts": "postcss.config.mjs, postcss.config.js",
+    "tailwind.config.js": "postcss.config.mjs, postcss.config.js",
+    "docker-compose.yml": "docker-compose.dev.yml, Dockerfile, .dockerignore",
+    ".env": ".env.local, .env.development, .env.production, .env.test, .env.example, .env.development.local, .env.production.local, .env.test.local",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmoji.json, .mailmap",
+    "README.md": "CHANGELOG.md, CONTRIBUTING.md, LICENSE, SECURITY.md",
+    "AGENTS.md": "CLAUDE.md, GEMINI.md",
+    ".prettierrc": ".prettierignore, .editorconfig",
+    "commitlint.config.js": ".commitlintrc*, .husky"
+  },
+
+  // Workbench - Visual Enhancements
+  "workbench.tree.indent": 16,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#ffd700",
+    "editorBracketHighlight.foreground2": "#da70d6",
+    "editorBracketHighlight.foreground3": "#87ceeb",
+    "editorBracketHighlight.foreground4": "#ffa500",
+    "editorBracketHighlight.foreground5": "#98fb98",
+    "editorBracketHighlight.foreground6": "#ad67dc"
+  },
+
+  // Error Lens
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.messageBackgroundMode": "message",
+
+  // Code Spell Checker
+  "cSpell.words": [
+    "nextjs",
+    "tailwindcss",
+    "shadcn",
+    "lucide",
+    "pnpm",
+    "clsx",
+    "cva",
+    "tanstack",
+    "zustand",
+    "framer"
+  ],
+  "cSpell.ignorePaths": [
+    "node_modules",
+    ".next",
+    "pnpm-lock.yaml",
+    "package.json"
+  ],
+
+  // Emmet for JSX
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // Auto-close tags
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+
+  // Better IntelliSense
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  // Problems panel
+  "problems.decorations.enabled": true
+}
