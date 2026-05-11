@@ -78,10 +78,19 @@ inputs:
 jobs:
   add:
     steps:
-      - run: "mkdir -p {{ inputs.outputDir }} && curl -fsSL https://raw.githubusercontent.com/betaversionio/ui/main/registry/new-york-v4/ui/{{ inputs.component }}.tsx -o {{ inputs.outputDir }}/{{ inputs.component }}.tsx"
+      - uses: xo/copy
+        with:
+          from: "registry/new-york-v4/ui/{{ inputs.component }}.tsx"
+          to: "{{ inputs.outputDir }}/{{ inputs.component }}.tsx"
 
       - if: "'{{ inputs.component }}' === 'file-upload'"
-        run: "mkdir -p hooks && curl -fsSL https://raw.githubusercontent.com/betaversionio/ui/main/registry/new-york-v4/hooks/use-file-upload.ts -o hooks/use-file-upload.ts"
+        uses: xo/copy
+        with:
+          from: "registry/new-york-v4/hooks/use-file-upload.ts"
+          to: "hooks/use-file-upload.ts"
 
       - if: "'{{ inputs.component }}' === 'toast'"
-        run: "mkdir -p hooks && curl -fsSL https://raw.githubusercontent.com/betaversionio/ui/main/registry/new-york-v4/hooks/use-toast.ts -o hooks/use-toast.ts"
+        uses: xo/copy
+        with:
+          from: "registry/new-york-v4/hooks/use-toast.ts"
+          to: "hooks/use-toast.ts"
