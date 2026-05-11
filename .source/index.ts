@@ -1,950 +1,110 @@
 // @ts-nocheck -- skip type checking
-import { _runtime } from "fumadocs-mdx/runtime/next"
-
-import * as docs_0 from "../content/docs/(root)/blocks.mdx?collection=docs"
-import * as docs_1 from "../content/docs/(root)/changelog.mdx?collection=docs"
-import * as docs_2 from "../content/docs/(root)/cli.mdx?collection=docs"
-import * as docs_3 from "../content/docs/(root)/components-json.mdx?collection=docs"
-import * as docs_4 from "../content/docs/(root)/directory.mdx?collection=docs"
-import * as docs_5 from "../content/docs/(root)/figma.mdx?collection=docs"
-import * as docs_6 from "../content/docs/(root)/index.mdx?collection=docs"
-import * as docs_7 from "../content/docs/(root)/javascript.mdx?collection=docs"
-import * as docs_8 from "../content/docs/(root)/legacy.mdx?collection=docs"
-import * as docs_9 from "../content/docs/(root)/mcp.mdx?collection=docs"
-import * as docs_10 from "../content/docs/(root)/monorepo.mdx?collection=docs"
-import * as docs_11 from "../content/docs/(root)/react-19.mdx?collection=docs"
-import * as docs_12 from "../content/docs/(root)/tailwind-v4.mdx?collection=docs"
-import * as docs_13 from "../content/docs/(root)/theming.mdx?collection=docs"
-import * as docs_14 from "../content/docs/(root)/v0.mdx?collection=docs"
-import * as docs_31 from "../content/docs/components/accordion.mdx?collection=docs"
-import * as docs_32 from "../content/docs/components/alert-dialog.mdx?collection=docs"
-import * as docs_33 from "../content/docs/components/alert.mdx?collection=docs"
-import * as docs_34 from "../content/docs/components/aspect-ratio.mdx?collection=docs"
-import * as docs_35 from "../content/docs/components/avatar.mdx?collection=docs"
-import * as docs_36 from "../content/docs/components/badge.mdx?collection=docs"
-import * as docs_37 from "../content/docs/components/breadcrumb.mdx?collection=docs"
-import * as docs_38 from "../content/docs/components/button-group.mdx?collection=docs"
-import * as docs_39 from "../content/docs/components/button.mdx?collection=docs"
-import * as docs_40 from "../content/docs/components/calendar.mdx?collection=docs"
-import * as docs_41 from "../content/docs/components/card.mdx?collection=docs"
-import * as docs_42 from "../content/docs/components/carousel.mdx?collection=docs"
-import * as docs_43 from "../content/docs/components/chart.mdx?collection=docs"
-import * as docs_44 from "../content/docs/components/checkbox.mdx?collection=docs"
-import * as docs_45 from "../content/docs/components/collapsible.mdx?collection=docs"
-import * as docs_46 from "../content/docs/components/combobox.mdx?collection=docs"
-import * as docs_47 from "../content/docs/components/command.mdx?collection=docs"
-import * as docs_48 from "../content/docs/components/context-menu.mdx?collection=docs"
-import * as docs_49 from "../content/docs/components/data-table.mdx?collection=docs"
-import * as docs_50 from "../content/docs/components/date-picker.mdx?collection=docs"
-import * as docs_51 from "../content/docs/components/dialog.mdx?collection=docs"
-import * as docs_52 from "../content/docs/components/drawer.mdx?collection=docs"
-import * as docs_53 from "../content/docs/components/dropdown-menu.mdx?collection=docs"
-import * as docs_54 from "../content/docs/components/empty.mdx?collection=docs"
-import * as docs_55 from "../content/docs/components/field.mdx?collection=docs"
-import * as docs_56 from "../content/docs/components/form.mdx?collection=docs"
-import * as docs_57 from "../content/docs/components/hover-card.mdx?collection=docs"
-import * as docs_58 from "../content/docs/components/index.mdx?collection=docs"
-import * as docs_59 from "../content/docs/components/input-group.mdx?collection=docs"
-import * as docs_60 from "../content/docs/components/input-otp.mdx?collection=docs"
-import * as docs_61 from "../content/docs/components/input.mdx?collection=docs"
-import * as docs_62 from "../content/docs/components/item.mdx?collection=docs"
-import * as docs_63 from "../content/docs/components/kbd.mdx?collection=docs"
-import * as docs_64 from "../content/docs/components/label.mdx?collection=docs"
-import * as docs_65 from "../content/docs/components/menubar.mdx?collection=docs"
-import * as docs_66 from "../content/docs/components/native-select.mdx?collection=docs"
-import * as docs_67 from "../content/docs/components/navigation-menu.mdx?collection=docs"
-import * as docs_68 from "../content/docs/components/pagination.mdx?collection=docs"
-import * as docs_69 from "../content/docs/components/popover.mdx?collection=docs"
-import * as docs_70 from "../content/docs/components/progress.mdx?collection=docs"
-import * as docs_71 from "../content/docs/components/radio-group.mdx?collection=docs"
-import * as docs_72 from "../content/docs/components/resizable.mdx?collection=docs"
-import * as docs_73 from "../content/docs/components/scroll-area.mdx?collection=docs"
-import * as docs_74 from "../content/docs/components/select.mdx?collection=docs"
-import * as docs_75 from "../content/docs/components/separator.mdx?collection=docs"
-import * as docs_76 from "../content/docs/components/sheet.mdx?collection=docs"
-import * as docs_77 from "../content/docs/components/sidebar.mdx?collection=docs"
-import * as docs_78 from "../content/docs/components/skeleton.mdx?collection=docs"
-import * as docs_79 from "../content/docs/components/slider.mdx?collection=docs"
-import * as docs_80 from "../content/docs/components/sonner.mdx?collection=docs"
-import * as docs_81 from "../content/docs/components/spinner.mdx?collection=docs"
-import * as docs_82 from "../content/docs/components/switch.mdx?collection=docs"
-import * as docs_83 from "../content/docs/components/table.mdx?collection=docs"
-import * as docs_84 from "../content/docs/components/tabs.mdx?collection=docs"
-import * as docs_85 from "../content/docs/components/textarea.mdx?collection=docs"
-import * as docs_86 from "../content/docs/components/toast.mdx?collection=docs"
-import * as docs_87 from "../content/docs/components/toggle-group.mdx?collection=docs"
-import * as docs_88 from "../content/docs/components/toggle.mdx?collection=docs"
-import * as docs_89 from "../content/docs/components/tooltip.mdx?collection=docs"
-import * as docs_90 from "../content/docs/components/typography.mdx?collection=docs"
-import * as docs_15 from "../content/docs/dark-mode/astro.mdx?collection=docs"
-import * as docs_16 from "../content/docs/dark-mode/index.mdx?collection=docs"
-import * as docs_17 from "../content/docs/dark-mode/next.mdx?collection=docs"
-import * as docs_18 from "../content/docs/dark-mode/remix.mdx?collection=docs"
-import * as docs_19 from "../content/docs/dark-mode/vite.mdx?collection=docs"
-import * as docs_91 from "../content/docs/forms/index.mdx?collection=docs"
-import * as docs_92 from "../content/docs/forms/next.mdx?collection=docs"
-import * as docs_93 from "../content/docs/forms/react-hook-form.mdx?collection=docs"
-import * as docs_94 from "../content/docs/forms/tanstack-form.mdx?collection=docs"
-import * as docs_20 from "../content/docs/installation/astro.mdx?collection=docs"
-import * as docs_21 from "../content/docs/installation/gatsby.mdx?collection=docs"
-import * as docs_22 from "../content/docs/installation/index.mdx?collection=docs"
-import * as docs_23 from "../content/docs/installation/laravel.mdx?collection=docs"
-import * as docs_24 from "../content/docs/installation/manual.mdx?collection=docs"
-import * as docs_25 from "../content/docs/installation/next.mdx?collection=docs"
-import * as docs_26 from "../content/docs/installation/react-router.mdx?collection=docs"
-import * as docs_27 from "../content/docs/installation/remix.mdx?collection=docs"
-import * as docs_28 from "../content/docs/installation/tanstack-router.mdx?collection=docs"
-import * as docs_29 from "../content/docs/installation/tanstack.mdx?collection=docs"
-import * as docs_30 from "../content/docs/installation/vite.mdx?collection=docs"
-import * as docs_95 from "../content/docs/registry/authentication.mdx?collection=docs"
-import * as docs_96 from "../content/docs/registry/examples.mdx?collection=docs"
-import * as docs_97 from "../content/docs/registry/faq.mdx?collection=docs"
-import * as docs_98 from "../content/docs/registry/getting-started.mdx?collection=docs"
-import * as docs_99 from "../content/docs/registry/index.mdx?collection=docs"
-import * as docs_100 from "../content/docs/registry/mcp.mdx?collection=docs"
-import * as docs_101 from "../content/docs/registry/namespace.mdx?collection=docs"
-import * as docs_102 from "../content/docs/registry/open-in-v0.mdx?collection=docs"
-import * as docs_103 from "../content/docs/registry/registry-index.mdx?collection=docs"
-import * as docs_104 from "../content/docs/registry/registry-item-json.mdx?collection=docs"
 import * as docs_105 from "../content/docs/registry/registry-json.mdx?collection=docs"
+import * as docs_104 from "../content/docs/registry/registry-item-json.mdx?collection=docs"
+import * as docs_103 from "../content/docs/registry/registry-index.mdx?collection=docs"
+import * as docs_102 from "../content/docs/registry/open-in-v0.mdx?collection=docs"
+import * as docs_101 from "../content/docs/registry/namespace.mdx?collection=docs"
+import * as docs_100 from "../content/docs/registry/mcp.mdx?collection=docs"
+import * as docs_99 from "../content/docs/registry/index.mdx?collection=docs"
+import * as docs_98 from "../content/docs/registry/getting-started.mdx?collection=docs"
+import * as docs_97 from "../content/docs/registry/faq.mdx?collection=docs"
+import * as docs_96 from "../content/docs/registry/examples.mdx?collection=docs"
+import * as docs_95 from "../content/docs/registry/authentication.mdx?collection=docs"
+import * as docs_94 from "../content/docs/components/typography.mdx?collection=docs"
+import * as docs_93 from "../content/docs/components/tooltip.mdx?collection=docs"
+import * as docs_92 from "../content/docs/components/toggle.mdx?collection=docs"
+import * as docs_91 from "../content/docs/components/toggle-group.mdx?collection=docs"
+import * as docs_90 from "../content/docs/components/toast.mdx?collection=docs"
+import * as docs_89 from "../content/docs/components/textarea.mdx?collection=docs"
+import * as docs_88 from "../content/docs/components/tabs.mdx?collection=docs"
+import * as docs_87 from "../content/docs/components/table.mdx?collection=docs"
+import * as docs_86 from "../content/docs/components/switch.mdx?collection=docs"
+import * as docs_85 from "../content/docs/components/spinner.mdx?collection=docs"
+import * as docs_84 from "../content/docs/components/sonner.mdx?collection=docs"
+import * as docs_83 from "../content/docs/components/slider.mdx?collection=docs"
+import * as docs_82 from "../content/docs/components/skeleton.mdx?collection=docs"
+import * as docs_81 from "../content/docs/components/sidebar.mdx?collection=docs"
+import * as docs_80 from "../content/docs/components/sheet.mdx?collection=docs"
+import * as docs_79 from "../content/docs/components/separator.mdx?collection=docs"
+import * as docs_78 from "../content/docs/components/select.mdx?collection=docs"
+import * as docs_77 from "../content/docs/components/scroll-area.mdx?collection=docs"
+import * as docs_76 from "../content/docs/components/resizable.mdx?collection=docs"
+import * as docs_75 from "../content/docs/components/radio-group.mdx?collection=docs"
+import * as docs_74 from "../content/docs/components/progress.mdx?collection=docs"
+import * as docs_73 from "../content/docs/components/popover.mdx?collection=docs"
+import * as docs_72 from "../content/docs/components/pagination.mdx?collection=docs"
+import * as docs_71 from "../content/docs/components/navigation-menu.mdx?collection=docs"
+import * as docs_70 from "../content/docs/components/native-select.mdx?collection=docs"
+import * as docs_69 from "../content/docs/components/menubar.mdx?collection=docs"
+import * as docs_68 from "../content/docs/components/label.mdx?collection=docs"
+import * as docs_67 from "../content/docs/components/kbd.mdx?collection=docs"
+import * as docs_66 from "../content/docs/components/item.mdx?collection=docs"
+import * as docs_65 from "../content/docs/components/input.mdx?collection=docs"
+import * as docs_64 from "../content/docs/components/input-otp.mdx?collection=docs"
+import * as docs_63 from "../content/docs/components/input-group.mdx?collection=docs"
+import * as docs_62 from "../content/docs/components/index.mdx?collection=docs"
+import * as docs_61 from "../content/docs/components/hover-card.mdx?collection=docs"
+import * as docs_60 from "../content/docs/components/form.mdx?collection=docs"
+import * as docs_59 from "../content/docs/components/field.mdx?collection=docs"
+import * as docs_58 from "../content/docs/components/empty.mdx?collection=docs"
+import * as docs_57 from "../content/docs/components/dropdown-menu.mdx?collection=docs"
+import * as docs_56 from "../content/docs/components/drawer.mdx?collection=docs"
+import * as docs_55 from "../content/docs/components/dialog.mdx?collection=docs"
+import * as docs_54 from "../content/docs/components/date-picker.mdx?collection=docs"
+import * as docs_53 from "../content/docs/components/data-table.mdx?collection=docs"
+import * as docs_52 from "../content/docs/components/context-menu.mdx?collection=docs"
+import * as docs_51 from "../content/docs/components/command.mdx?collection=docs"
+import * as docs_50 from "../content/docs/components/combobox.mdx?collection=docs"
+import * as docs_49 from "../content/docs/components/collapsible.mdx?collection=docs"
+import * as docs_48 from "../content/docs/components/checkbox.mdx?collection=docs"
+import * as docs_47 from "../content/docs/components/chart.mdx?collection=docs"
+import * as docs_46 from "../content/docs/components/carousel.mdx?collection=docs"
+import * as docs_45 from "../content/docs/components/card.mdx?collection=docs"
+import * as docs_44 from "../content/docs/components/calendar.mdx?collection=docs"
+import * as docs_43 from "../content/docs/components/button.mdx?collection=docs"
+import * as docs_42 from "../content/docs/components/button-group.mdx?collection=docs"
+import * as docs_41 from "../content/docs/components/breadcrumb.mdx?collection=docs"
+import * as docs_40 from "../content/docs/components/badge.mdx?collection=docs"
+import * as docs_39 from "../content/docs/components/avatar.mdx?collection=docs"
+import * as docs_38 from "../content/docs/components/aspect-ratio.mdx?collection=docs"
+import * as docs_37 from "../content/docs/components/alert.mdx?collection=docs"
+import * as docs_36 from "../content/docs/components/alert-dialog.mdx?collection=docs"
+import * as docs_35 from "../content/docs/components/accordion.mdx?collection=docs"
+import * as docs_34 from "../content/docs/installation/vite.mdx?collection=docs"
+import * as docs_33 from "../content/docs/installation/tanstack.mdx?collection=docs"
+import * as docs_32 from "../content/docs/installation/tanstack-router.mdx?collection=docs"
+import * as docs_31 from "../content/docs/installation/remix.mdx?collection=docs"
+import * as docs_30 from "../content/docs/installation/react-router.mdx?collection=docs"
+import * as docs_29 from "../content/docs/installation/next.mdx?collection=docs"
+import * as docs_28 from "../content/docs/installation/manual.mdx?collection=docs"
+import * as docs_27 from "../content/docs/installation/laravel.mdx?collection=docs"
+import * as docs_26 from "../content/docs/installation/index.mdx?collection=docs"
+import * as docs_25 from "../content/docs/installation/gatsby.mdx?collection=docs"
+import * as docs_24 from "../content/docs/installation/astro.mdx?collection=docs"
+import * as docs_23 from "../content/docs/forms/tanstack-form.mdx?collection=docs"
+import * as docs_22 from "../content/docs/forms/react-hook-form.mdx?collection=docs"
+import * as docs_21 from "../content/docs/forms/next.mdx?collection=docs"
+import * as docs_20 from "../content/docs/forms/index.mdx?collection=docs"
+import * as docs_19 from "../content/docs/dark-mode/vite.mdx?collection=docs"
+import * as docs_18 from "../content/docs/dark-mode/remix.mdx?collection=docs"
+import * as docs_17 from "../content/docs/dark-mode/next.mdx?collection=docs"
+import * as docs_16 from "../content/docs/dark-mode/index.mdx?collection=docs"
+import * as docs_15 from "../content/docs/dark-mode/astro.mdx?collection=docs"
+import * as docs_14 from "../content/docs/(root)/v0.mdx?collection=docs"
+import * as docs_13 from "../content/docs/(root)/theming.mdx?collection=docs"
+import * as docs_12 from "../content/docs/(root)/tailwind-v4.mdx?collection=docs"
+import * as docs_11 from "../content/docs/(root)/react-19.mdx?collection=docs"
+import * as docs_10 from "../content/docs/(root)/monorepo.mdx?collection=docs"
+import * as docs_9 from "../content/docs/(root)/mcp.mdx?collection=docs"
+import * as docs_8 from "../content/docs/(root)/legacy.mdx?collection=docs"
+import * as docs_7 from "../content/docs/(root)/javascript.mdx?collection=docs"
+import * as docs_6 from "../content/docs/(root)/index.mdx?collection=docs"
+import * as docs_5 from "../content/docs/(root)/figma.mdx?collection=docs"
+import * as docs_4 from "../content/docs/(root)/directory.mdx?collection=docs"
+import * as docs_3 from "../content/docs/(root)/components-json.mdx?collection=docs"
+import * as docs_2 from "../content/docs/(root)/cli.mdx?collection=docs"
+import * as docs_1 from "../content/docs/(root)/changelog.mdx?collection=docs"
+import * as docs_0 from "../content/docs/(root)/blocks.mdx?collection=docs"
+import { _runtime } from "fumadocs-mdx/runtime/next"
 import * as _source from "../source.config"
-
-export const docs = _runtime.docs<typeof _source.docs>(
-  [
-    {
-      info: {
-        path: "(root)/blocks.mdx",
-        fullPath: "content\\docs\\(root)\\blocks.mdx",
-      },
-      data: docs_0,
-    },
-    {
-      info: {
-        path: "(root)/changelog.mdx",
-        fullPath: "content\\docs\\(root)\\changelog.mdx",
-      },
-      data: docs_1,
-    },
-    {
-      info: {
-        path: "(root)/cli.mdx",
-        fullPath: "content\\docs\\(root)\\cli.mdx",
-      },
-      data: docs_2,
-    },
-    {
-      info: {
-        path: "(root)/components-json.mdx",
-        fullPath: "content\\docs\\(root)\\components-json.mdx",
-      },
-      data: docs_3,
-    },
-    {
-      info: {
-        path: "(root)/directory.mdx",
-        fullPath: "content\\docs\\(root)\\directory.mdx",
-      },
-      data: docs_4,
-    },
-    {
-      info: {
-        path: "(root)/figma.mdx",
-        fullPath: "content\\docs\\(root)\\figma.mdx",
-      },
-      data: docs_5,
-    },
-    {
-      info: {
-        path: "(root)/index.mdx",
-        fullPath: "content\\docs\\(root)\\index.mdx",
-      },
-      data: docs_6,
-    },
-    {
-      info: {
-        path: "(root)/javascript.mdx",
-        fullPath: "content\\docs\\(root)\\javascript.mdx",
-      },
-      data: docs_7,
-    },
-    {
-      info: {
-        path: "(root)/legacy.mdx",
-        fullPath: "content\\docs\\(root)\\legacy.mdx",
-      },
-      data: docs_8,
-    },
-    {
-      info: {
-        path: "(root)/mcp.mdx",
-        fullPath: "content\\docs\\(root)\\mcp.mdx",
-      },
-      data: docs_9,
-    },
-    {
-      info: {
-        path: "(root)/monorepo.mdx",
-        fullPath: "content\\docs\\(root)\\monorepo.mdx",
-      },
-      data: docs_10,
-    },
-    {
-      info: {
-        path: "(root)/react-19.mdx",
-        fullPath: "content\\docs\\(root)\\react-19.mdx",
-      },
-      data: docs_11,
-    },
-    {
-      info: {
-        path: "(root)/tailwind-v4.mdx",
-        fullPath: "content\\docs\\(root)\\tailwind-v4.mdx",
-      },
-      data: docs_12,
-    },
-    {
-      info: {
-        path: "(root)/theming.mdx",
-        fullPath: "content\\docs\\(root)\\theming.mdx",
-      },
-      data: docs_13,
-    },
-    {
-      info: {
-        path: "(root)/v0.mdx",
-        fullPath: "content\\docs\\(root)\\v0.mdx",
-      },
-      data: docs_14,
-    },
-    {
-      info: {
-        path: "dark-mode/astro.mdx",
-        fullPath: "content\\docs\\dark-mode\\astro.mdx",
-      },
-      data: docs_15,
-    },
-    {
-      info: {
-        path: "dark-mode/index.mdx",
-        fullPath: "content\\docs\\dark-mode\\index.mdx",
-      },
-      data: docs_16,
-    },
-    {
-      info: {
-        path: "dark-mode/next.mdx",
-        fullPath: "content\\docs\\dark-mode\\next.mdx",
-      },
-      data: docs_17,
-    },
-    {
-      info: {
-        path: "dark-mode/remix.mdx",
-        fullPath: "content\\docs\\dark-mode\\remix.mdx",
-      },
-      data: docs_18,
-    },
-    {
-      info: {
-        path: "dark-mode/vite.mdx",
-        fullPath: "content\\docs\\dark-mode\\vite.mdx",
-      },
-      data: docs_19,
-    },
-    {
-      info: {
-        path: "installation/astro.mdx",
-        fullPath: "content\\docs\\installation\\astro.mdx",
-      },
-      data: docs_20,
-    },
-    {
-      info: {
-        path: "installation/gatsby.mdx",
-        fullPath: "content\\docs\\installation\\gatsby.mdx",
-      },
-      data: docs_21,
-    },
-    {
-      info: {
-        path: "installation/index.mdx",
-        fullPath: "content\\docs\\installation\\index.mdx",
-      },
-      data: docs_22,
-    },
-    {
-      info: {
-        path: "installation/laravel.mdx",
-        fullPath: "content\\docs\\installation\\laravel.mdx",
-      },
-      data: docs_23,
-    },
-    {
-      info: {
-        path: "installation/manual.mdx",
-        fullPath: "content\\docs\\installation\\manual.mdx",
-      },
-      data: docs_24,
-    },
-    {
-      info: {
-        path: "installation/next.mdx",
-        fullPath: "content\\docs\\installation\\next.mdx",
-      },
-      data: docs_25,
-    },
-    {
-      info: {
-        path: "installation/react-router.mdx",
-        fullPath: "content\\docs\\installation\\react-router.mdx",
-      },
-      data: docs_26,
-    },
-    {
-      info: {
-        path: "installation/remix.mdx",
-        fullPath: "content\\docs\\installation\\remix.mdx",
-      },
-      data: docs_27,
-    },
-    {
-      info: {
-        path: "installation/tanstack-router.mdx",
-        fullPath: "content\\docs\\installation\\tanstack-router.mdx",
-      },
-      data: docs_28,
-    },
-    {
-      info: {
-        path: "installation/tanstack.mdx",
-        fullPath: "content\\docs\\installation\\tanstack.mdx",
-      },
-      data: docs_29,
-    },
-    {
-      info: {
-        path: "installation/vite.mdx",
-        fullPath: "content\\docs\\installation\\vite.mdx",
-      },
-      data: docs_30,
-    },
-    {
-      info: {
-        path: "components/accordion.mdx",
-        fullPath: "content\\docs\\components\\accordion.mdx",
-      },
-      data: docs_31,
-    },
-    {
-      info: {
-        path: "components/alert-dialog.mdx",
-        fullPath: "content\\docs\\components\\alert-dialog.mdx",
-      },
-      data: docs_32,
-    },
-    {
-      info: {
-        path: "components/alert.mdx",
-        fullPath: "content\\docs\\components\\alert.mdx",
-      },
-      data: docs_33,
-    },
-    {
-      info: {
-        path: "components/aspect-ratio.mdx",
-        fullPath: "content\\docs\\components\\aspect-ratio.mdx",
-      },
-      data: docs_34,
-    },
-    {
-      info: {
-        path: "components/avatar.mdx",
-        fullPath: "content\\docs\\components\\avatar.mdx",
-      },
-      data: docs_35,
-    },
-    {
-      info: {
-        path: "components/badge.mdx",
-        fullPath: "content\\docs\\components\\badge.mdx",
-      },
-      data: docs_36,
-    },
-    {
-      info: {
-        path: "components/breadcrumb.mdx",
-        fullPath: "content\\docs\\components\\breadcrumb.mdx",
-      },
-      data: docs_37,
-    },
-    {
-      info: {
-        path: "components/button-group.mdx",
-        fullPath: "content\\docs\\components\\button-group.mdx",
-      },
-      data: docs_38,
-    },
-    {
-      info: {
-        path: "components/button.mdx",
-        fullPath: "content\\docs\\components\\button.mdx",
-      },
-      data: docs_39,
-    },
-    {
-      info: {
-        path: "components/calendar.mdx",
-        fullPath: "content\\docs\\components\\calendar.mdx",
-      },
-      data: docs_40,
-    },
-    {
-      info: {
-        path: "components/card.mdx",
-        fullPath: "content\\docs\\components\\card.mdx",
-      },
-      data: docs_41,
-    },
-    {
-      info: {
-        path: "components/carousel.mdx",
-        fullPath: "content\\docs\\components\\carousel.mdx",
-      },
-      data: docs_42,
-    },
-    {
-      info: {
-        path: "components/chart.mdx",
-        fullPath: "content\\docs\\components\\chart.mdx",
-      },
-      data: docs_43,
-    },
-    {
-      info: {
-        path: "components/checkbox.mdx",
-        fullPath: "content\\docs\\components\\checkbox.mdx",
-      },
-      data: docs_44,
-    },
-    {
-      info: {
-        path: "components/collapsible.mdx",
-        fullPath: "content\\docs\\components\\collapsible.mdx",
-      },
-      data: docs_45,
-    },
-    {
-      info: {
-        path: "components/combobox.mdx",
-        fullPath: "content\\docs\\components\\combobox.mdx",
-      },
-      data: docs_46,
-    },
-    {
-      info: {
-        path: "components/command.mdx",
-        fullPath: "content\\docs\\components\\command.mdx",
-      },
-      data: docs_47,
-    },
-    {
-      info: {
-        path: "components/context-menu.mdx",
-        fullPath: "content\\docs\\components\\context-menu.mdx",
-      },
-      data: docs_48,
-    },
-    {
-      info: {
-        path: "components/data-table.mdx",
-        fullPath: "content\\docs\\components\\data-table.mdx",
-      },
-      data: docs_49,
-    },
-    {
-      info: {
-        path: "components/date-picker.mdx",
-        fullPath: "content\\docs\\components\\date-picker.mdx",
-      },
-      data: docs_50,
-    },
-    {
-      info: {
-        path: "components/dialog.mdx",
-        fullPath: "content\\docs\\components\\dialog.mdx",
-      },
-      data: docs_51,
-    },
-    {
-      info: {
-        path: "components/drawer.mdx",
-        fullPath: "content\\docs\\components\\drawer.mdx",
-      },
-      data: docs_52,
-    },
-    {
-      info: {
-        path: "components/dropdown-menu.mdx",
-        fullPath: "content\\docs\\components\\dropdown-menu.mdx",
-      },
-      data: docs_53,
-    },
-    {
-      info: {
-        path: "components/empty.mdx",
-        fullPath: "content\\docs\\components\\empty.mdx",
-      },
-      data: docs_54,
-    },
-    {
-      info: {
-        path: "components/field.mdx",
-        fullPath: "content\\docs\\components\\field.mdx",
-      },
-      data: docs_55,
-    },
-    {
-      info: {
-        path: "components/form.mdx",
-        fullPath: "content\\docs\\components\\form.mdx",
-      },
-      data: docs_56,
-    },
-    {
-      info: {
-        path: "components/hover-card.mdx",
-        fullPath: "content\\docs\\components\\hover-card.mdx",
-      },
-      data: docs_57,
-    },
-    {
-      info: {
-        path: "components/index.mdx",
-        fullPath: "content\\docs\\components\\index.mdx",
-      },
-      data: docs_58,
-    },
-    {
-      info: {
-        path: "components/input-group.mdx",
-        fullPath: "content\\docs\\components\\input-group.mdx",
-      },
-      data: docs_59,
-    },
-    {
-      info: {
-        path: "components/input-otp.mdx",
-        fullPath: "content\\docs\\components\\input-otp.mdx",
-      },
-      data: docs_60,
-    },
-    {
-      info: {
-        path: "components/input.mdx",
-        fullPath: "content\\docs\\components\\input.mdx",
-      },
-      data: docs_61,
-    },
-    {
-      info: {
-        path: "components/item.mdx",
-        fullPath: "content\\docs\\components\\item.mdx",
-      },
-      data: docs_62,
-    },
-    {
-      info: {
-        path: "components/kbd.mdx",
-        fullPath: "content\\docs\\components\\kbd.mdx",
-      },
-      data: docs_63,
-    },
-    {
-      info: {
-        path: "components/label.mdx",
-        fullPath: "content\\docs\\components\\label.mdx",
-      },
-      data: docs_64,
-    },
-    {
-      info: {
-        path: "components/menubar.mdx",
-        fullPath: "content\\docs\\components\\menubar.mdx",
-      },
-      data: docs_65,
-    },
-    {
-      info: {
-        path: "components/native-select.mdx",
-        fullPath: "content\\docs\\components\\native-select.mdx",
-      },
-      data: docs_66,
-    },
-    {
-      info: {
-        path: "components/navigation-menu.mdx",
-        fullPath: "content\\docs\\components\\navigation-menu.mdx",
-      },
-      data: docs_67,
-    },
-    {
-      info: {
-        path: "components/pagination.mdx",
-        fullPath: "content\\docs\\components\\pagination.mdx",
-      },
-      data: docs_68,
-    },
-    {
-      info: {
-        path: "components/popover.mdx",
-        fullPath: "content\\docs\\components\\popover.mdx",
-      },
-      data: docs_69,
-    },
-    {
-      info: {
-        path: "components/progress.mdx",
-        fullPath: "content\\docs\\components\\progress.mdx",
-      },
-      data: docs_70,
-    },
-    {
-      info: {
-        path: "components/radio-group.mdx",
-        fullPath: "content\\docs\\components\\radio-group.mdx",
-      },
-      data: docs_71,
-    },
-    {
-      info: {
-        path: "components/resizable.mdx",
-        fullPath: "content\\docs\\components\\resizable.mdx",
-      },
-      data: docs_72,
-    },
-    {
-      info: {
-        path: "components/scroll-area.mdx",
-        fullPath: "content\\docs\\components\\scroll-area.mdx",
-      },
-      data: docs_73,
-    },
-    {
-      info: {
-        path: "components/select.mdx",
-        fullPath: "content\\docs\\components\\select.mdx",
-      },
-      data: docs_74,
-    },
-    {
-      info: {
-        path: "components/separator.mdx",
-        fullPath: "content\\docs\\components\\separator.mdx",
-      },
-      data: docs_75,
-    },
-    {
-      info: {
-        path: "components/sheet.mdx",
-        fullPath: "content\\docs\\components\\sheet.mdx",
-      },
-      data: docs_76,
-    },
-    {
-      info: {
-        path: "components/sidebar.mdx",
-        fullPath: "content\\docs\\components\\sidebar.mdx",
-      },
-      data: docs_77,
-    },
-    {
-      info: {
-        path: "components/skeleton.mdx",
-        fullPath: "content\\docs\\components\\skeleton.mdx",
-      },
-      data: docs_78,
-    },
-    {
-      info: {
-        path: "components/slider.mdx",
-        fullPath: "content\\docs\\components\\slider.mdx",
-      },
-      data: docs_79,
-    },
-    {
-      info: {
-        path: "components/sonner.mdx",
-        fullPath: "content\\docs\\components\\sonner.mdx",
-      },
-      data: docs_80,
-    },
-    {
-      info: {
-        path: "components/spinner.mdx",
-        fullPath: "content\\docs\\components\\spinner.mdx",
-      },
-      data: docs_81,
-    },
-    {
-      info: {
-        path: "components/switch.mdx",
-        fullPath: "content\\docs\\components\\switch.mdx",
-      },
-      data: docs_82,
-    },
-    {
-      info: {
-        path: "components/table.mdx",
-        fullPath: "content\\docs\\components\\table.mdx",
-      },
-      data: docs_83,
-    },
-    {
-      info: {
-        path: "components/tabs.mdx",
-        fullPath: "content\\docs\\components\\tabs.mdx",
-      },
-      data: docs_84,
-    },
-    {
-      info: {
-        path: "components/textarea.mdx",
-        fullPath: "content\\docs\\components\\textarea.mdx",
-      },
-      data: docs_85,
-    },
-    {
-      info: {
-        path: "components/toast.mdx",
-        fullPath: "content\\docs\\components\\toast.mdx",
-      },
-      data: docs_86,
-    },
-    {
-      info: {
-        path: "components/toggle-group.mdx",
-        fullPath: "content\\docs\\components\\toggle-group.mdx",
-      },
-      data: docs_87,
-    },
-    {
-      info: {
-        path: "components/toggle.mdx",
-        fullPath: "content\\docs\\components\\toggle.mdx",
-      },
-      data: docs_88,
-    },
-    {
-      info: {
-        path: "components/tooltip.mdx",
-        fullPath: "content\\docs\\components\\tooltip.mdx",
-      },
-      data: docs_89,
-    },
-    {
-      info: {
-        path: "components/typography.mdx",
-        fullPath: "content\\docs\\components\\typography.mdx",
-      },
-      data: docs_90,
-    },
-    {
-      info: {
-        path: "forms/index.mdx",
-        fullPath: "content\\docs\\forms\\index.mdx",
-      },
-      data: docs_91,
-    },
-    {
-      info: {
-        path: "forms/next.mdx",
-        fullPath: "content\\docs\\forms\\next.mdx",
-      },
-      data: docs_92,
-    },
-    {
-      info: {
-        path: "forms/react-hook-form.mdx",
-        fullPath: "content\\docs\\forms\\react-hook-form.mdx",
-      },
-      data: docs_93,
-    },
-    {
-      info: {
-        path: "forms/tanstack-form.mdx",
-        fullPath: "content\\docs\\forms\\tanstack-form.mdx",
-      },
-      data: docs_94,
-    },
-    {
-      info: {
-        path: "registry/authentication.mdx",
-        fullPath: "content\\docs\\registry\\authentication.mdx",
-      },
-      data: docs_95,
-    },
-    {
-      info: {
-        path: "registry/examples.mdx",
-        fullPath: "content\\docs\\registry\\examples.mdx",
-      },
-      data: docs_96,
-    },
-    {
-      info: {
-        path: "registry/faq.mdx",
-        fullPath: "content\\docs\\registry\\faq.mdx",
-      },
-      data: docs_97,
-    },
-    {
-      info: {
-        path: "registry/getting-started.mdx",
-        fullPath: "content\\docs\\registry\\getting-started.mdx",
-      },
-      data: docs_98,
-    },
-    {
-      info: {
-        path: "registry/index.mdx",
-        fullPath: "content\\docs\\registry\\index.mdx",
-      },
-      data: docs_99,
-    },
-    {
-      info: {
-        path: "registry/mcp.mdx",
-        fullPath: "content\\docs\\registry\\mcp.mdx",
-      },
-      data: docs_100,
-    },
-    {
-      info: {
-        path: "registry/namespace.mdx",
-        fullPath: "content\\docs\\registry\\namespace.mdx",
-      },
-      data: docs_101,
-    },
-    {
-      info: {
-        path: "registry/open-in-v0.mdx",
-        fullPath: "content\\docs\\registry\\open-in-v0.mdx",
-      },
-      data: docs_102,
-    },
-    {
-      info: {
-        path: "registry/registry-index.mdx",
-        fullPath: "content\\docs\\registry\\registry-index.mdx",
-      },
-      data: docs_103,
-    },
-    {
-      info: {
-        path: "registry/registry-item-json.mdx",
-        fullPath: "content\\docs\\registry\\registry-item-json.mdx",
-      },
-      data: docs_104,
-    },
-    {
-      info: {
-        path: "registry/registry-json.mdx",
-        fullPath: "content\\docs\\registry\\registry-json.mdx",
-      },
-      data: docs_105,
-    },
-  ],
-  [
-    {
-      info: { path: "meta.json", fullPath: "content\\docs\\meta.json" },
-      data: {
-        pages: [
-          "(root)",
-          "changelog",
-          "components",
-          "forms",
-          "installation",
-          "dark-mode",
-          "registry",
-        ],
-        root: true,
-      },
-    },
-    {
-      info: {
-        path: "(root)/meta.json",
-        fullPath: "content\\docs\\(root)\\meta.json",
-      },
-      data: {
-        title: "Get Started",
-        pages: [
-          "index",
-          "[Installation](/docs/installation)",
-          "components-json",
-          "theming",
-          "[Dark Mode](/docs/dark-mode)",
-          "[CLI](/docs/cli)",
-          "typography",
-          "javascript",
-          "blocks",
-          "figma",
-        ],
-      },
-    },
-    {
-      info: {
-        path: "dark-mode/meta.json",
-        fullPath: "content\\docs\\dark-mode\\meta.json",
-      },
-      data: {
-        title: "Dark mode",
-        pages: ["index", "next", "vite", "astro", "remix"],
-      },
-    },
-    {
-      info: {
-        path: "forms/meta.json",
-        fullPath: "content\\docs\\forms\\meta.json",
-      },
-      data: { pages: ["react-hook-form", "tanstack-form"] },
-    },
-    {
-      info: {
-        path: "installation/meta.json",
-        fullPath: "content\\docs\\installation\\meta.json",
-      },
-      data: {
-        pages: [
-          "next",
-          "vite",
-          "laravel",
-          "react-router",
-          "remix",
-          "astro",
-          "tanstack",
-          "tanstack-router",
-          "manual",
-        ],
-      },
-    },
-    {
-      info: {
-        path: "registry/meta.json",
-        fullPath: "content\\docs\\registry\\meta.json",
-      },
-      data: {
-        title: "Registry",
-        pages: [
-          "index",
-          "getting-started",
-          "namespace",
-          "authentication",
-          "examples",
-          "registry-index",
-          "registry-json",
-          "registry-item-json",
-        ],
-      },
-    },
-  ]
-)
+export const docs = _runtime.docs<typeof _source.docs>([{ info: {"path":"(root)/blocks.mdx","fullPath":"content/docs/(root)/blocks.mdx"}, data: docs_0 }, { info: {"path":"(root)/changelog.mdx","fullPath":"content/docs/(root)/changelog.mdx"}, data: docs_1 }, { info: {"path":"(root)/cli.mdx","fullPath":"content/docs/(root)/cli.mdx"}, data: docs_2 }, { info: {"path":"(root)/components-json.mdx","fullPath":"content/docs/(root)/components-json.mdx"}, data: docs_3 }, { info: {"path":"(root)/directory.mdx","fullPath":"content/docs/(root)/directory.mdx"}, data: docs_4 }, { info: {"path":"(root)/figma.mdx","fullPath":"content/docs/(root)/figma.mdx"}, data: docs_5 }, { info: {"path":"(root)/index.mdx","fullPath":"content/docs/(root)/index.mdx"}, data: docs_6 }, { info: {"path":"(root)/javascript.mdx","fullPath":"content/docs/(root)/javascript.mdx"}, data: docs_7 }, { info: {"path":"(root)/legacy.mdx","fullPath":"content/docs/(root)/legacy.mdx"}, data: docs_8 }, { info: {"path":"(root)/mcp.mdx","fullPath":"content/docs/(root)/mcp.mdx"}, data: docs_9 }, { info: {"path":"(root)/monorepo.mdx","fullPath":"content/docs/(root)/monorepo.mdx"}, data: docs_10 }, { info: {"path":"(root)/react-19.mdx","fullPath":"content/docs/(root)/react-19.mdx"}, data: docs_11 }, { info: {"path":"(root)/tailwind-v4.mdx","fullPath":"content/docs/(root)/tailwind-v4.mdx"}, data: docs_12 }, { info: {"path":"(root)/theming.mdx","fullPath":"content/docs/(root)/theming.mdx"}, data: docs_13 }, { info: {"path":"(root)/v0.mdx","fullPath":"content/docs/(root)/v0.mdx"}, data: docs_14 }, { info: {"path":"dark-mode/astro.mdx","fullPath":"content/docs/dark-mode/astro.mdx"}, data: docs_15 }, { info: {"path":"dark-mode/index.mdx","fullPath":"content/docs/dark-mode/index.mdx"}, data: docs_16 }, { info: {"path":"dark-mode/next.mdx","fullPath":"content/docs/dark-mode/next.mdx"}, data: docs_17 }, { info: {"path":"dark-mode/remix.mdx","fullPath":"content/docs/dark-mode/remix.mdx"}, data: docs_18 }, { info: {"path":"dark-mode/vite.mdx","fullPath":"content/docs/dark-mode/vite.mdx"}, data: docs_19 }, { info: {"path":"forms/index.mdx","fullPath":"content/docs/forms/index.mdx"}, data: docs_20 }, { info: {"path":"forms/next.mdx","fullPath":"content/docs/forms/next.mdx"}, data: docs_21 }, { info: {"path":"forms/react-hook-form.mdx","fullPath":"content/docs/forms/react-hook-form.mdx"}, data: docs_22 }, { info: {"path":"forms/tanstack-form.mdx","fullPath":"content/docs/forms/tanstack-form.mdx"}, data: docs_23 }, { info: {"path":"installation/astro.mdx","fullPath":"content/docs/installation/astro.mdx"}, data: docs_24 }, { info: {"path":"installation/gatsby.mdx","fullPath":"content/docs/installation/gatsby.mdx"}, data: docs_25 }, { info: {"path":"installation/index.mdx","fullPath":"content/docs/installation/index.mdx"}, data: docs_26 }, { info: {"path":"installation/laravel.mdx","fullPath":"content/docs/installation/laravel.mdx"}, data: docs_27 }, { info: {"path":"installation/manual.mdx","fullPath":"content/docs/installation/manual.mdx"}, data: docs_28 }, { info: {"path":"installation/next.mdx","fullPath":"content/docs/installation/next.mdx"}, data: docs_29 }, { info: {"path":"installation/react-router.mdx","fullPath":"content/docs/installation/react-router.mdx"}, data: docs_30 }, { info: {"path":"installation/remix.mdx","fullPath":"content/docs/installation/remix.mdx"}, data: docs_31 }, { info: {"path":"installation/tanstack-router.mdx","fullPath":"content/docs/installation/tanstack-router.mdx"}, data: docs_32 }, { info: {"path":"installation/tanstack.mdx","fullPath":"content/docs/installation/tanstack.mdx"}, data: docs_33 }, { info: {"path":"installation/vite.mdx","fullPath":"content/docs/installation/vite.mdx"}, data: docs_34 }, { info: {"path":"components/accordion.mdx","fullPath":"content/docs/components/accordion.mdx"}, data: docs_35 }, { info: {"path":"components/alert-dialog.mdx","fullPath":"content/docs/components/alert-dialog.mdx"}, data: docs_36 }, { info: {"path":"components/alert.mdx","fullPath":"content/docs/components/alert.mdx"}, data: docs_37 }, { info: {"path":"components/aspect-ratio.mdx","fullPath":"content/docs/components/aspect-ratio.mdx"}, data: docs_38 }, { info: {"path":"components/avatar.mdx","fullPath":"content/docs/components/avatar.mdx"}, data: docs_39 }, { info: {"path":"components/badge.mdx","fullPath":"content/docs/components/badge.mdx"}, data: docs_40 }, { info: {"path":"components/breadcrumb.mdx","fullPath":"content/docs/components/breadcrumb.mdx"}, data: docs_41 }, { info: {"path":"components/button-group.mdx","fullPath":"content/docs/components/button-group.mdx"}, data: docs_42 }, { info: {"path":"components/button.mdx","fullPath":"content/docs/components/button.mdx"}, data: docs_43 }, { info: {"path":"components/calendar.mdx","fullPath":"content/docs/components/calendar.mdx"}, data: docs_44 }, { info: {"path":"components/card.mdx","fullPath":"content/docs/components/card.mdx"}, data: docs_45 }, { info: {"path":"components/carousel.mdx","fullPath":"content/docs/components/carousel.mdx"}, data: docs_46 }, { info: {"path":"components/chart.mdx","fullPath":"content/docs/components/chart.mdx"}, data: docs_47 }, { info: {"path":"components/checkbox.mdx","fullPath":"content/docs/components/checkbox.mdx"}, data: docs_48 }, { info: {"path":"components/collapsible.mdx","fullPath":"content/docs/components/collapsible.mdx"}, data: docs_49 }, { info: {"path":"components/combobox.mdx","fullPath":"content/docs/components/combobox.mdx"}, data: docs_50 }, { info: {"path":"components/command.mdx","fullPath":"content/docs/components/command.mdx"}, data: docs_51 }, { info: {"path":"components/context-menu.mdx","fullPath":"content/docs/components/context-menu.mdx"}, data: docs_52 }, { info: {"path":"components/data-table.mdx","fullPath":"content/docs/components/data-table.mdx"}, data: docs_53 }, { info: {"path":"components/date-picker.mdx","fullPath":"content/docs/components/date-picker.mdx"}, data: docs_54 }, { info: {"path":"components/dialog.mdx","fullPath":"content/docs/components/dialog.mdx"}, data: docs_55 }, { info: {"path":"components/drawer.mdx","fullPath":"content/docs/components/drawer.mdx"}, data: docs_56 }, { info: {"path":"components/dropdown-menu.mdx","fullPath":"content/docs/components/dropdown-menu.mdx"}, data: docs_57 }, { info: {"path":"components/empty.mdx","fullPath":"content/docs/components/empty.mdx"}, data: docs_58 }, { info: {"path":"components/field.mdx","fullPath":"content/docs/components/field.mdx"}, data: docs_59 }, { info: {"path":"components/form.mdx","fullPath":"content/docs/components/form.mdx"}, data: docs_60 }, { info: {"path":"components/hover-card.mdx","fullPath":"content/docs/components/hover-card.mdx"}, data: docs_61 }, { info: {"path":"components/index.mdx","fullPath":"content/docs/components/index.mdx"}, data: docs_62 }, { info: {"path":"components/input-group.mdx","fullPath":"content/docs/components/input-group.mdx"}, data: docs_63 }, { info: {"path":"components/input-otp.mdx","fullPath":"content/docs/components/input-otp.mdx"}, data: docs_64 }, { info: {"path":"components/input.mdx","fullPath":"content/docs/components/input.mdx"}, data: docs_65 }, { info: {"path":"components/item.mdx","fullPath":"content/docs/components/item.mdx"}, data: docs_66 }, { info: {"path":"components/kbd.mdx","fullPath":"content/docs/components/kbd.mdx"}, data: docs_67 }, { info: {"path":"components/label.mdx","fullPath":"content/docs/components/label.mdx"}, data: docs_68 }, { info: {"path":"components/menubar.mdx","fullPath":"content/docs/components/menubar.mdx"}, data: docs_69 }, { info: {"path":"components/native-select.mdx","fullPath":"content/docs/components/native-select.mdx"}, data: docs_70 }, { info: {"path":"components/navigation-menu.mdx","fullPath":"content/docs/components/navigation-menu.mdx"}, data: docs_71 }, { info: {"path":"components/pagination.mdx","fullPath":"content/docs/components/pagination.mdx"}, data: docs_72 }, { info: {"path":"components/popover.mdx","fullPath":"content/docs/components/popover.mdx"}, data: docs_73 }, { info: {"path":"components/progress.mdx","fullPath":"content/docs/components/progress.mdx"}, data: docs_74 }, { info: {"path":"components/radio-group.mdx","fullPath":"content/docs/components/radio-group.mdx"}, data: docs_75 }, { info: {"path":"components/resizable.mdx","fullPath":"content/docs/components/resizable.mdx"}, data: docs_76 }, { info: {"path":"components/scroll-area.mdx","fullPath":"content/docs/components/scroll-area.mdx"}, data: docs_77 }, { info: {"path":"components/select.mdx","fullPath":"content/docs/components/select.mdx"}, data: docs_78 }, { info: {"path":"components/separator.mdx","fullPath":"content/docs/components/separator.mdx"}, data: docs_79 }, { info: {"path":"components/sheet.mdx","fullPath":"content/docs/components/sheet.mdx"}, data: docs_80 }, { info: {"path":"components/sidebar.mdx","fullPath":"content/docs/components/sidebar.mdx"}, data: docs_81 }, { info: {"path":"components/skeleton.mdx","fullPath":"content/docs/components/skeleton.mdx"}, data: docs_82 }, { info: {"path":"components/slider.mdx","fullPath":"content/docs/components/slider.mdx"}, data: docs_83 }, { info: {"path":"components/sonner.mdx","fullPath":"content/docs/components/sonner.mdx"}, data: docs_84 }, { info: {"path":"components/spinner.mdx","fullPath":"content/docs/components/spinner.mdx"}, data: docs_85 }, { info: {"path":"components/switch.mdx","fullPath":"content/docs/components/switch.mdx"}, data: docs_86 }, { info: {"path":"components/table.mdx","fullPath":"content/docs/components/table.mdx"}, data: docs_87 }, { info: {"path":"components/tabs.mdx","fullPath":"content/docs/components/tabs.mdx"}, data: docs_88 }, { info: {"path":"components/textarea.mdx","fullPath":"content/docs/components/textarea.mdx"}, data: docs_89 }, { info: {"path":"components/toast.mdx","fullPath":"content/docs/components/toast.mdx"}, data: docs_90 }, { info: {"path":"components/toggle-group.mdx","fullPath":"content/docs/components/toggle-group.mdx"}, data: docs_91 }, { info: {"path":"components/toggle.mdx","fullPath":"content/docs/components/toggle.mdx"}, data: docs_92 }, { info: {"path":"components/tooltip.mdx","fullPath":"content/docs/components/tooltip.mdx"}, data: docs_93 }, { info: {"path":"components/typography.mdx","fullPath":"content/docs/components/typography.mdx"}, data: docs_94 }, { info: {"path":"registry/authentication.mdx","fullPath":"content/docs/registry/authentication.mdx"}, data: docs_95 }, { info: {"path":"registry/examples.mdx","fullPath":"content/docs/registry/examples.mdx"}, data: docs_96 }, { info: {"path":"registry/faq.mdx","fullPath":"content/docs/registry/faq.mdx"}, data: docs_97 }, { info: {"path":"registry/getting-started.mdx","fullPath":"content/docs/registry/getting-started.mdx"}, data: docs_98 }, { info: {"path":"registry/index.mdx","fullPath":"content/docs/registry/index.mdx"}, data: docs_99 }, { info: {"path":"registry/mcp.mdx","fullPath":"content/docs/registry/mcp.mdx"}, data: docs_100 }, { info: {"path":"registry/namespace.mdx","fullPath":"content/docs/registry/namespace.mdx"}, data: docs_101 }, { info: {"path":"registry/open-in-v0.mdx","fullPath":"content/docs/registry/open-in-v0.mdx"}, data: docs_102 }, { info: {"path":"registry/registry-index.mdx","fullPath":"content/docs/registry/registry-index.mdx"}, data: docs_103 }, { info: {"path":"registry/registry-item-json.mdx","fullPath":"content/docs/registry/registry-item-json.mdx"}, data: docs_104 }, { info: {"path":"registry/registry-json.mdx","fullPath":"content/docs/registry/registry-json.mdx"}, data: docs_105 }], [{"info":{"path":"meta.json","fullPath":"content/docs/meta.json"},"data":{"pages":["(root)","changelog","components","forms","installation","dark-mode","registry"],"root":true}}, {"info":{"path":"(root)/meta.json","fullPath":"content/docs/(root)/meta.json"},"data":{"title":"Get Started","pages":["index","[Installation](/docs/installation)","components-json","theming","[Dark Mode](/docs/dark-mode)","[CLI](/docs/cli)","monorepo","typography","v0","javascript","blocks","figma","changelog","[llms.txt](/llms.txt)","legacy"]}}, {"info":{"path":"dark-mode/meta.json","fullPath":"content/docs/dark-mode/meta.json"},"data":{"title":"Dark mode","pages":["index","next","vite","astro","remix"]}}, {"info":{"path":"installation/meta.json","fullPath":"content/docs/installation/meta.json"},"data":{"pages":["next","vite","laravel","react-router","remix","astro","tanstack","tanstack-router","manual"]}}, {"info":{"path":"forms/meta.json","fullPath":"content/docs/forms/meta.json"},"data":{"pages":["react-hook-form","tanstack-form"]}}, {"info":{"path":"registry/meta.json","fullPath":"content/docs/registry/meta.json"},"data":{"title":"Registry","pages":["index","getting-started","namespace","authentication","examples","mcp","registry-index","open-in-v0","registry-json","registry-item-json"]}}])

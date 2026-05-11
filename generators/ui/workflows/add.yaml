@@ -1,0 +1,99 @@
+name: add
+description: Add a UI component from betaversionio/ui to your project
+
+inputs:
+  component:
+    description: Which component to add
+    prompt: "Which component?"
+    type: select
+    choices:
+      - { value: accordion, label: Accordion }
+      - { value: alert, label: Alert }
+      - { value: alert-dialog, label: AlertDialog }
+      - { value: attachment-preview, label: AttachmentPreview }
+      - { value: avatar, label: Avatar }
+      - { value: badge, label: Badge }
+      - { value: bento-grid, label: BentoGrid }
+      - { value: breadcrumb, label: Breadcrumb }
+      - { value: button, label: Button }
+      - { value: button-group, label: ButtonGroup }
+      - { value: calendar, label: Calendar }
+      - { value: card, label: Card }
+      - { value: carousel, label: Carousel }
+      - { value: checkbox, label: Checkbox }
+      - { value: collapsible, label: Collapsible }
+      - { value: color-picker, label: ColorPicker }
+      - { value: command, label: Command }
+      - { value: container-text-flip, label: ContainerTextFlip }
+      - { value: content-shell, label: ContentShell }
+      - { value: date-picker, label: DatePicker }
+      - { value: decor-icon, label: DecorIcon }
+      - { value: dialog, label: Dialog }
+      - { value: drawer, label: Drawer }
+      - { value: dropdown-menu, label: DropdownMenu }
+      - { value: field, label: Field }
+      - { value: file-upload, label: FileUpload }
+      - { value: form, label: Form }
+      - { value: form-dialog, label: FormDialog }
+      - { value: hero-background, label: HeroBackground }
+      - { value: hero-section, label: HeroSection }
+      - { value: hover-card, label: HoverCard }
+      - { value: icon-button, label: IconButton }
+      - { value: infinite-slider, label: InfiniteSlider }
+      - { value: input, label: Input }
+      - { value: input-otp, label: InputOTP }
+      - { value: label, label: Label }
+      - { value: navigation-menu, label: NavigationMenu }
+      - { value: pagination, label: Pagination }
+      - { value: particles, label: Particles }
+      - { value: password-input, label: PasswordInput }
+      - { value: popover, label: Popover }
+      - { value: portal, label: Portal }
+      - { value: progress, label: Progress }
+      - { value: radio-group, label: RadioGroup }
+      - { value: resizable, label: Resizable }
+      - { value: scroll-area, label: ScrollArea }
+      - { value: select, label: Select }
+      - { value: separator, label: Separator }
+      - { value: sheet, label: Sheet }
+      - { value: sidebar, label: Sidebar }
+      - { value: skeleton, label: Skeleton }
+      - { value: slider, label: Slider }
+      - { value: sonner, label: Sonner }
+      - { value: spinner, label: Spinner }
+      - { value: spotlight, label: Spotlight }
+      - { value: switch, label: Switch }
+      - { value: table, label: Table }
+      - { value: tabs, label: Tabs }
+      - { value: text-generate-effect, label: TextGenerateEffect }
+      - { value: textarea, label: Textarea }
+      - { value: toast, label: Toast }
+      - { value: toggle, label: Toggle }
+      - { value: tooltip, label: Tooltip }
+
+  outputDir:
+    description: Output directory for the component
+    default: components/ui
+
+jobs:
+  add:
+    steps:
+      # Copy the component from the registry (path is relative to this generator dir)
+      - uses: xo/copy
+        with:
+          from: "../../registry/new-york-v4/ui/{{ inputs.component }}.tsx"
+          to: "{{ inputs.outputDir }}/{{ inputs.component }}.tsx"
+
+      # file-upload also needs its hook
+      - if: "'{{ inputs.component }}' === 'file-upload'"
+        uses: xo/copy
+        with:
+          from: "../../registry/new-york-v4/hooks/use-file-upload.ts"
+          to: "hooks/use-file-upload.ts"
+
+      # toast also needs its hook
+      - if: "'{{ inputs.component }}' === 'toast'"
+        uses: xo/copy
+        with:
+          from: "../../registry/new-york-v4/hooks/use-toast.ts"
+          to: "hooks/use-toast.ts"

@@ -1,0 +1,6 @@
+name: ui
+description: Add UI components from betaversionio/ui to your project
+
+triggers:
+  - name: add
+    description: Add a component (alias for the add workflow)

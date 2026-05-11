@@ -673,4 +673,206 @@ export const ui: Registry["items"] = [
       },
     ],
   },
+  // ── @exo/ui components ────────────────────────────────────────────────────
+  {
+    name: "icon-button",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority"],
+    files: [
+      {
+        path: "ui/icon-button.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "password-input",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["input"],
+    files: [
+      {
+        path: "ui/password-input.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "portal",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/portal.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "form-dialog",
+    type: "registry:ui",
+    registryDependencies: ["button", "dialog", "spinner"],
+    files: [
+      {
+        path: "ui/form-dialog.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "content-shell",
+    type: "registry:ui",
+    registryDependencies: ["sheet", "dialog"],
+    files: [
+      {
+        path: "ui/content-shell.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "color-picker",
+    type: "registry:ui",
+    dependencies: ["react-colorful"],
+    registryDependencies: ["button", "popover", "input"],
+    files: [
+      {
+        path: "ui/color-picker.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "decor-icon",
+    type: "registry:ui",
+    dependencies: ["class-variance-authority"],
+    files: [
+      {
+        path: "ui/decor-icon.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "bento-grid",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/bento-grid.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "particles",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/particles.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "spotlight",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/spotlight.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "infinite-slider",
+    type: "registry:ui",
+    dependencies: ["motion", "react-use-measure"],
+    files: [
+      {
+        path: "ui/infinite-slider.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "text-generate-effect",
+    type: "registry:ui",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ui/text-generate-effect.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "container-text-flip",
+    type: "registry:ui",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ui/container-text-flip.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "hero-background",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/hero-background.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "hero-section",
+    type: "registry:ui",
+    registryDependencies: ["hero-background"],
+    files: [
+      {
+        path: "ui/hero-section.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "attachment-preview",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    files: [
+      {
+        path: "ui/attachment-preview.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "date-picker",
+    type: "registry:ui",
+    dependencies: ["dayjs", "lucide-react"],
+    registryDependencies: ["calendar", "input", "popover", "select"],
+    files: [
+      {
+        path: "ui/date-picker.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "file-upload",
+    type: "registry:ui",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button", "progress", "alert", "use-file-upload"],
+    files: [
+      {
+        path: "ui/file-upload.tsx",
+        type: "registry:ui",
+      },
+      {
+        path: "hooks/use-file-upload.ts",
+        type: "registry:hook",
+      },
+    ],
+  },
 ]

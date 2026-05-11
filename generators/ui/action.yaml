@@ -1,0 +1,14 @@
+name: add-ui
+description: Add a UI component from betaversionio/ui to your project
+
+inputs:
+  component:
+    description: Component name (button, input, icon-button, date-picker, ...)
+    required: true
+  outputDir:
+    description: Output directory for the component
+    default: components/ui
+
+runs:
+  using: node
+  main: actions/add.js
